@@ -1,5 +1,4 @@
 namespace Utilities.Matrices {
-    import Std.Convert.DoubleAsStringWithPrecision;
     import Std.Math.Complex;
     import Std.Arrays.*;
     import Utilities.Complex.*;
@@ -16,11 +15,13 @@ namespace Utilities.Matrices {
         Transposed(ConjugateMatrix(A))
     }
 
-    function ComplexEqual(A : Complex[][]) : Bool {
-        
-    } 
+//     function ComplexEqual(A : Complex[][]) : Bool {
 
-    function IsHermitian(A : Complex[][]) : Bool {
-        ConjugateTranspose(A)
-    }
+//     } 
+
+
+
+//     function IsHermitian(A : Complex[][]) : Bool {
+//         ConjugateTranspose(A)
+//     }
 }
