@@ -2,11 +2,16 @@ import Std.Math.ComplexPolar;
 import Std.Math.*;
 import Std.Arrays.*;
 open Utilities.Complex;
+open Utilities.Matrices;
+open Utilities.Vector;
 
 @EntryPoint()
-function Main() : Complex {
+function Main() : Bool {
 
-    return Conjugate(Complex(3., -1.));
+    let arrC1 = [Complex(1., 2.), Complex(3., 4.)];
+    let arrC2 = [Complex(1., 2.), Complex(3., 4.)];
+
+    AreEqualVectorsC(arrC1, arrC2)
     
 }
 
