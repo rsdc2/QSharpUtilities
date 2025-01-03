@@ -1,5 +1,5 @@
 namespace Utilities.Complex {
-    import Std.Math.Complex;
+    import Std.Math.*;
 
     /// Return the conjugate of a complex number
     function Conjugate(complex : Complex) : Complex {
@@ -10,4 +10,8 @@ namespace Utilities.Complex {
         x.Imag == y.Imag and x.Real == y.Real
     }
     
+    function NegC(x : Complex) : Complex {
+        MinusC(Complex(0., 0.), x)
+    }
+
 }
