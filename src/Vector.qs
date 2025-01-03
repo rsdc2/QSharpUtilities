@@ -1,4 +1,4 @@
-namespace Utilities.Vector {
+namespace Utilities.Vectors {
     import Std.Math.*;
     import Std.Arrays.*;
     import Utilities.Complex.*;
@@ -8,10 +8,14 @@ namespace Utilities.Vector {
         Mapped(f, A)
     }
 
-    function AreEqualVectorsC(A : Complex[], B: Complex[]) : Bool {
-        let partiallyApplied = Mapped(Curry(EqualC), A);
+    function EqualV<'T>(pred : 'T -> 'T -> Bool, A : 'T[], B : 'T[]) : Bool {
+        let partiallyApplied = Mapped(pred, A);
         let applied = Zipped(partiallyApplied, B);
         All((f, x) -> f(x), applied)
-    } 
+    }
 
+    function EqualVectorsC(A : Complex[], B: Complex[]) : Bool {
+        let equal = Curry2(EqualC);
+        EqualV(equal, A, B)
+    } 
 }
