@@ -4,6 +4,10 @@ namespace Utilities.Vectors {
     import Utilities.Complex.*;
     import Utilities.Functions.*;
 
+    function MulC(x : Double, A : Complex[]) : Complex[] {
+        Mapped(y -> Complex(y.Real * x, y.Imag * x), A)
+    }
+
     function MappedPartial<'T, 'U, 'V>(A : 'T[], f : 'T -> 'U -> 'V) : ('U -> 'V)[] {
         Mapped(f, A)
     }
