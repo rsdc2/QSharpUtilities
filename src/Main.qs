@@ -1,12 +1,16 @@
-import Std.Math.ComplexPolar;
+import Std.Core;
 import Std.Math.*;
 import Std.Arrays.*;
+import Std.Diagnostics.*;
 open Utilities.Complex;
 open Utilities.Matrices.Conjugate;
 open Utilities.Vectors;
+import Utilities.Testing.Assertions.*;
 
 @EntryPoint()
 function Main() : Unit {
+    Fact(1 == 2, "1 should be equal to 1")
+    // Assert(Complex(1., 1.), Complex(1., 1.))
 
     // let arrC1 = [[Complex(1., 2.), Complex(3., 4.)],
     //              [Complex(1., 2.), Complex(3., 4.)]];
