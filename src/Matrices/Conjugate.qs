@@ -1,9 +1,15 @@
 namespace Utilities.Matrices.Conjugate {
     import Std.Math.Complex;
     import Std.Arrays.*;
+    import Std.Core;
     import Utilities.Complex.*;
     import Utilities.Vectors.*;
     import Utilities.Functions.*;
+
+    newtype cls = (
+        x : Int,
+        y : Int
+    );
 
     function ConjugateVector(A : Complex[]) : Complex[] {
         Mapped(Conjugate, A)
