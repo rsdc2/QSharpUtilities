@@ -1,3 +1,4 @@
+import Utilities.Matrices.Inverse.Inverted2x2;
 import Std.Core;
 import Std.Math.*;
 import Std.Arrays.*;
@@ -6,10 +7,14 @@ open Utilities.Complex;
 open Utilities.Matrices.Conjugate;
 open Utilities.Vectors;
 import Utilities.Testing.Assertions.*;
+import Utilities.Matrices.*;
+import Utilities.Matrices.Examples.*;
 
 @EntryPoint()
-function Main() : Unit {
-    Fact(1 == 2, "1 should be equal to 1")
+function Main() : Complex[][] {
+
+    Inverted2x2(Ex2x2())
+
     // Assert(Complex(1., 1.), Complex(1., 1.))
 
     // let arrC1 = [[Complex(1., 2.), Complex(3., 4.)],

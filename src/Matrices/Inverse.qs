@@ -4,6 +4,7 @@ namespace Utilities.Matrices.Inverse {
     import Std.Arrays.*;
     import Std.Math.*;
     import Utilities.Complex.*;
+    import Utilities.Matrices.Multiply.*;
 
     /// # Summary
     /// Invert a 2x2 matrix
@@ -14,9 +15,9 @@ namespace Utilities.Matrices.Inverse {
         let c = A[1][0];
         let d = A[1][1];
 
-        let det = DividedByC(Complex(1., 0.), MinusC(TimesC(a, d), TimesC(b, c)));
+        let det = DividedByC(ToC(1.), MinusC(TimesC(a, d), TimesC(b, c)));
         let B = [[d, NegC(b)],
-                 [NegC(c), a]]
-        
+                 [NegC(c), a]];
+        ScalarMulMatC(det, B)
     }
 }

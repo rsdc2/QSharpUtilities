@@ -27,13 +27,14 @@ namespace Utilities.Matrices.Conjugate {
         ConjugateTranspose(A)
     }
 
-    function EqualMatricesC(A : Complex[][], B: Complex[][]) : Bool {
+    /// Return true if all the values of two complex matrices are equal
+    function MatricesEqualC(A : Complex[][], B: Complex[][]) : Bool {
         let equal = Curry2(EqualVectorsC);
         EqualV(equal, A, B)
     }
 
     function IsHermitian(A : Complex[][]) : Bool {
-        EqualMatricesC(A, ConjugateTranspose(A))
+        MatricesEqualC(A, ConjugateTranspose(A))
     }
 
     // function IsUnitary(A : Complex[][]) : Bool {

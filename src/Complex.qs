@@ -14,4 +14,9 @@ namespace Utilities.Complex {
         MinusC(Complex(0., 0.), x)
     }
 
+    /// Convert a Double to a Complex
+    function ToC(x : Double) : Complex {
+        Complex(x, 0.)
+    }
+
 }

@@ -4,8 +4,9 @@ namespace Utilities.Vectors {
     import Utilities.Complex.*;
     import Utilities.Functions.*;
 
-    function MulC(x : Double, A : Complex[]) : Complex[] {
-        Mapped(y -> Complex(y.Real * x, y.Imag * x), A)
+    /// Multiply a complex vector by a scalar complex
+    function ScalarMulVecC(x : Complex, A : Complex[]) : Complex[] {
+        Mapped(y -> TimesC(x, y), A)
     }
 
     function MappedPartial<'T, 'U, 'V>(A : 'T[], f : 'T -> 'U -> 'V) : ('U -> 'V)[] {
@@ -22,4 +23,11 @@ namespace Utilities.Vectors {
         let equal = Curry2(EqualC);
         EqualV(equal, A, B)
     } 
+
+    /// Convert a Double vector to a Complex vector
+    function ToCVec(A : Double[]) : Complex[] {
+        Mapped(ToC, A)
+    }
+
+    // function DotProdVec(A)
 }
