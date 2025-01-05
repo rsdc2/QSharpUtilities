@@ -13,4 +13,10 @@ namespace Utilities.Matrices {
     function ToCMat(A : Double[][]) : Complex[][] {
         Mapped(ToCVec, A)
     }   
+
+    function RealMat(A : Complex[][]) : Double[][] {
+        Mapped(RealVec, A)
+    }
+
+    
 }

@@ -23,4 +23,8 @@ namespace Utilities.Complex {
         Complex(x, 0.)
     }
 
+    function Real(x : Complex) : Double {
+        x.Real
+    }
+
 }

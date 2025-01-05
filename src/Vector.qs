@@ -30,8 +30,17 @@ namespace Utilities.Vectors {
         Mapped(ToC, A)
     }
 
+    function RealVec(A : Complex[]) : Double[] {
+        Mapped(Real, A)
+    }
+
     function DotProdVec(A : Complex[], B : Complex[]) : Complex {
         Fact(Length(A) == Length(B), "Vectors must be of equal length");
         Fold((x, y) -> PlusC(x, y), ToC(0.), Mapped((x, y) -> TimesC(x, y), Zipped(A, B)))
+    }
+
+    function DotProdVecMat(A : Complex[][], B : Complex[]) : Complex [] {
+        // Fact(Length(ColumnAt(0, A)) == Length(B), "Rows in B must be of the same length as A");
+        Mapped(DotProdVec(B, _), A)
     }
 }
