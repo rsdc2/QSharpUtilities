@@ -1,6 +1,7 @@
 namespace Utilities.Vectors {
     import Std.Math.*;
     import Std.Arrays.*;
+    import Std.Diagnostics.*;
     import Utilities.Complex.*;
     import Utilities.Functions.*;
 
@@ -29,5 +30,8 @@ namespace Utilities.Vectors {
         Mapped(ToC, A)
     }
 
-    // function DotProdVec(A)
+    function DotProdVec(A : Complex[], B : Complex[]) : Complex {
+        Fact(Length(A) == Length(B), "Vectors must be of equal length");
+        Fold((x, y) -> PlusC(x, y), ToC(0.), Mapped((x, y) -> TimesC(x, y), Zipped(A, B)))
+    }
 }
