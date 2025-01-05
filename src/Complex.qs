@@ -9,6 +9,10 @@ namespace Utilities.Complex {
     function EqualC(x : Complex, y : Complex) : Bool {
         x.Imag == y.Imag and x.Real == y.Real
     }
+
+    function EqualC_ () : Complex -> Complex -> Bool {
+        x -> y -> x.Imag == y.Imag and x.Real == y.Real
+    }
     
     function NegC(x : Complex) : Complex {
         MinusC(Complex(0., 0.), x)
