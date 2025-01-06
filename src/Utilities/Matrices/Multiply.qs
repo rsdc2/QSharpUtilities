@@ -1,6 +1,5 @@
 namespace Utilities.Matrices.Multiply {
     import Std.Arrays.Transposed;
-    import Main.DotProdVecMain;
     import Std.Arrays.Mapped;
     import Std.Math.*;
     import Std.Diagnostics.*;

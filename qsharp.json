@@ -1,1 +1,18 @@
-{}
+{
+    "author": "Robert Crellin",
+    "license": "MIT",
+    "lints": [
+        {
+          "lint": "needlessParens",
+          "level": "error"
+        },
+        {
+          "lint": "redundantSemicolons",
+          "level": "error"
+        },
+        {
+          "lint": "divisionByZero",
+          "level": "error"
+        }
+      ]
+}

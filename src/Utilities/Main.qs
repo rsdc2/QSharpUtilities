@@ -1,38 +1,30 @@
-import Utilities.Functions.Curry2;
-import Utilities.Matrices.Inverse.Inverted2x2;
 import Std.Core;
 import Std.Math.*;
 import Std.Arrays.*;
 import Std.Diagnostics.*;
-open Utilities.Complex;
-open Utilities.Matrices.Conjugate;
-open Utilities.Vectors;
-import Utilities.Testing.Assertions.*;
+import Utilities.Complex.*;
 import Utilities.Matrices.*;
-import Utilities.Matrices.Multiply.*;
-import Utilities.Matrices.Examples.*;
 
 
+// function DotProdVecMain() : Complex {
+//     DotProdVec(ToCVec([1., 3., -5.]), ToCVec([4., -2., -1.]))
+// }
 
 
-function DotProdVecMain() : Complex {
-    DotProdVec(ToCVec([1., 3., -5.]), ToCVec([4., -2., -1.]))
-}
-
-
-function DotProdVecMatMain() : Complex[] {
-    // DotProdVecMat(ToCMat([[4., -2., -1.], [4., -2., -1.], [4., -2., -1.]]), ToCVec([1., 3., -5.]))
-    DotProdVecMat(ToCMat([[1., 2., 3.], [4., 5., 6.]]), ToCVec([1., 2., 3.]))
-}
+// function DotProdVecMatMain() : Complex[] {
+//     // DotProdVecMat(ToCMat([[4., -2., -1.], [4., -2., -1.], [4., -2., -1.]]), ToCVec([1., 3., -5.]))
+//     DotProdVecMat(ToCMat([[1., 2., 3.], [4., 5., 6.]]), ToCVec([1., 2., 3.]))
+// }
 
 @EntryPoint()
 function DotProdMatsMain() : Double[][] {
-    RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
+    [[]]
+    // RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
 }
 
-function Main2() : Complex[][] {
+// function Main2() : Complex[][] {
 
-    Inverted2x2(Ex2x2())
+//     Inverted2x2(Ex2x2())
 
     // Assert(Complex(1., 1.), Complex(1., 1.))
 
@@ -45,7 +37,7 @@ function Main2() : Complex[][] {
     //             [Complex(0., -1.), Complex(2., 0.)]];
     // IsHermitian(mat)
     // 2. * Complex(1., 2.);
-}
+// }
 
 
     // TODO: Write your Q# code here.
