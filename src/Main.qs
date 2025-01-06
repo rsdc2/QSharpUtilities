@@ -17,8 +17,8 @@ import Utilities.Matrices.*;
 // }
 
 @EntryPoint()
-function DotProdMatsMain() : Double[][] {
-    [[]]
+function DotProdMatsMain() : Bool {
+    Complex(1., 1.) == Complex(1., 1.)
     // RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
 }
 
