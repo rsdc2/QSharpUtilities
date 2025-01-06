@@ -24,6 +24,27 @@ Complex(1., 1.) == Complex(1., 1.)
 The `EqualC` function performs this comparison:
 
 ```
-EqualC(Complex(1., 1.), Complex(1., 1.)) // Evaluates to true
+EqualC(Complex(1., 1.), Complex(1., 1.)); // Evaluates to true
 ```
+
 ## Functions
+
+### Curry2<'T, 'U, 'V>(f : ('T, 'U) -> 'V) : ('T -> 'U -> 'V)
+
+Takes a function with a pair of parameters, and returns a curried version of it, i.e. two functions taking a single parameter each. For example, whereas `EqualC` has the type signature:
+
+```
+(Complex, Complex) -> Bool
+```
+
+in the following:
+
+```
+let equalC = Curry2(EqualC);
+```
+
+`equalC` has the type signature:
+
+```
+Complex -> Complex -> Bool
+```
