@@ -4,6 +4,7 @@ namespace Utilities.Vectors {
     import Std.Diagnostics.*;
     import Utilities.Complex.*;
     import Utilities.Functions.*;
+    import Utilities.Matrices.Properties.*;
 
     /// Multiply a complex vector by a scalar complex
     function ScalarMulVecC(x : Complex, A : Complex[]) : Complex[] {
@@ -51,8 +52,18 @@ namespace Utilities.Vectors {
         DotProdVecT(A, B, ToC(0.), (x, y) -> TimesC(x, y), (x, y) -> PlusC(x, y))
     }
 
-    function DotProdVecMatC(A : Complex[][], B : Complex[]) : Complex [] {
-        // Fact(Length(ColumnAt(0, A)) == Length(B), "Rows in B must be of the same length as A");
+    function DotProdVecMatT<'T>(A : 'T[][], B : 'T[], empty : 'T, mul : ('T, 'T) -> 'T, add : ('T, 'T) -> 'T) : 'T[] {
+        Fact(ColCount(A) == Length(B), "Number of columns of A must be the same as the length of B.");
+        Mapped(DotProdVecT(B, _, empty, mul, add), A)
+    }
+
+    function DotProdVecMat(A : Double[][], B : Double[]) : Double[] {
+        Fact(ColCount(A) == Length(B), "Number of columns of A must be the same as the length of B.");
+        Mapped(DotProdVec(B, _), A)
+    }
+
+    function DotProdVecMatC(A : Complex[][], B : Complex[]) : Complex[] {
+        Fact(ColCount(A) == Length(B), "Number of columns of A must be the same as the length of B.");
         Mapped(DotProdVecC(B, _), A)
     }
 }
