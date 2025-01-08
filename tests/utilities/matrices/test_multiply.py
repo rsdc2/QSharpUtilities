@@ -1,4 +1,4 @@
-import qsharp
+import qsharp # type: ignore
 import numpy as np
 
 qsharp.init(project_root = "./QSharpUtilities")

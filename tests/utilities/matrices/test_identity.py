@@ -1,4 +1,4 @@
-import qsharp
+import qsharp # type: ignore
 qsharp.init(project_root = "./QSharpUtilities")
 
 
