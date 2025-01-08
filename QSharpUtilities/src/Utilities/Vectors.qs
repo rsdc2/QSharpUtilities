@@ -35,9 +35,20 @@ namespace Utilities.Vectors {
         Mapped(Real, A)
     }
 
-    function DotProdVecC(A : Complex[], B : Complex[]) : Complex {
+    function DotProdVecT<'T>(A : 'T[], B : 'T[], empty : 'T, mul : ('T, 'T) -> 'T, add : ('T, 'T) -> 'T) : 'T {
         Fact(Length(A) == Length(B), "Vectors must be of equal length");
-        Fold((x, y) -> PlusC(x, y), ToC(0.), Mapped((x, y) -> TimesC(x, y), Zipped(A, B)))
+        let zipped = Zipped(A, B);
+        let multiplied = Mapped((x, y) -> mul(x, y), zipped);
+        let summed = Fold((x, y) -> add(x, y), empty, multiplied);
+        summed
+    }
+
+    function DotProdVec(A : Double[], B : Double[]) : Double {
+        DotProdVecT(A, B, 0., (x, y) -> x * y, (x, y) -> x + y)
+    }
+
+    function DotProdVecC(A : Complex[], B : Complex[]) : Complex {
+        DotProdVecT(A, B, ToC(0.), (x, y) -> TimesC(x, y), (x, y) -> PlusC(x, y))
     }
 
     function DotProdVecMatC(A : Complex[][], B : Complex[]) : Complex [] {
