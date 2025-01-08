@@ -4,7 +4,7 @@ import Std.Arrays.*;
 import Std.Diagnostics.*;
 import Utilities.Complex.*;
 import Utilities.Matrices.*;
-
+import Utilities.Matrices.Multiply.*;
 
 // function DotProdVecMain() : Complex {
 //     DotProdVec(ToCVec([1., 3., -5.]), ToCVec([4., -2., -1.]))
@@ -17,9 +17,9 @@ import Utilities.Matrices.*;
 // }
 
 @EntryPoint()
-function DotProdMatsMain() : Bool {
-    Complex(1., 1.) == Complex(1., 1.)
-    // RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
+function Main() : Double[][] {
+    // Complex(1., 1.) == Complex(1., 1.)
+    RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
 }
 
 // function Main2() : Complex[][] {
