@@ -14,7 +14,7 @@ namespace Utilities.Matrices.Multiply {
 
 
     // function DotProdMat(A : Double[][], B : Double[][]) : Double[][] {
-
+    //     Mapped(DOt)
     // }
 
     function DotProdMatC(A : Complex[][], B : Complex[][]) : Complex[][] {
