@@ -18,9 +18,10 @@ import Utilities.Matrices.Multiply.*;
 
 
 @EntryPoint()
-function Main() : Double[][] {
+function Main() : Int {
     // Complex(1., 1.) == Complex(1., 1.)
-    RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
+    // RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))
+    Length(Transposed([[1., 2., 3.], [3., 4., 3.]]))
 }
 
 // function Main2() : Complex[][] {
