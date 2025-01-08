@@ -11,8 +11,14 @@ namespace Utilities.Matrices.Multiply {
         Mapped(V -> ScalarMulVecC(x, V), A)
     }
 
+
+
+    // function DotProdMat(A : Double[][], B : Double[][]) : Double[][] {
+
+    // }
+
     function DotProdMatC(A : Complex[][], B : Complex[][]) : Complex[][] {
         // Fact(Length(A) == Length(B), "Matrices must be of equal ");
-        Transposed(Mapped(DotProdVecMat(A, _), Transposed(B)))
+        Transposed(Mapped(DotProdVecMatC(A, _), Transposed(B)))
     }
 }

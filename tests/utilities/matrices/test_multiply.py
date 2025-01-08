@@ -1,13 +1,18 @@
 import qsharp
-qsharp.init(project_root = "./")
+import numpy as np
 
+qsharp.init(project_root = "./QSharpUtilities")
 
-def test_matrix_dot_product():
-    qscode = ("import Utilities.Matrices.*;"
+def matrix_dot_product_code(m1: list[list[float]], m2: list[list[float]]) -> str:
+    return (f"import Utilities.Matrices.*;"
               "import Utilities.Matrices.Multiply.*;"
-              "RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])));")
+              f"RealMat(DotProdMatC(ToCMat({m1}), ToCMat({m2})));")
+
+def test_matrix_dot_product_happy():
+    m1 = [[1., 2.], [3., 4.]]
+    m2 = [[5., 6.], [7., 8.]]
+    qscode = matrix_dot_product_code(m1, m2)
     
     result = qsharp.eval(qscode)
 
-    assert result == [[19.0, 22.0], 
-                      [43.0, 50.0]]
+    assert np.array_equal(np.array(result), np.array(m1) @ np.array(m2))

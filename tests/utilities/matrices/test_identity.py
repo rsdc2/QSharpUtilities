@@ -1,5 +1,5 @@
 import qsharp
-qsharp.init(project_root = "./")
+qsharp.init(project_root = "./QSharpUtilities")
 
 
 def test_2x2_identity():

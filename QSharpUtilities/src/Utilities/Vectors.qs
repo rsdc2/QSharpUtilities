@@ -17,6 +17,7 @@ namespace Utilities.Vectors {
     function EqualV<'T>(pred : 'T -> 'T -> Bool, A : 'T[], B : 'T[]) : Bool {
         let partiallyApplied = Mapped(pred, A);
         let applied = Zipped(partiallyApplied, B);
+        Std.Arrays.
         All((f, x) -> f(x), applied)
     }
 
@@ -34,13 +35,13 @@ namespace Utilities.Vectors {
         Mapped(Real, A)
     }
 
-    function DotProdVec(A : Complex[], B : Complex[]) : Complex {
+    function DotProdVecC(A : Complex[], B : Complex[]) : Complex {
         Fact(Length(A) == Length(B), "Vectors must be of equal length");
         Fold((x, y) -> PlusC(x, y), ToC(0.), Mapped((x, y) -> TimesC(x, y), Zipped(A, B)))
     }
 
-    function DotProdVecMat(A : Complex[][], B : Complex[]) : Complex [] {
+    function DotProdVecMatC(A : Complex[][], B : Complex[]) : Complex [] {
         // Fact(Length(ColumnAt(0, A)) == Length(B), "Rows in B must be of the same length as A");
-        Mapped(DotProdVec(B, _), A)
+        Mapped(DotProdVecC(B, _), A)
     }
 }
