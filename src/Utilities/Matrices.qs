@@ -14,9 +14,14 @@ namespace Utilities.Matrices {
         Mapped(ToCVec, A)
     }   
 
+    /// Convert a complex matrix into a real matrix
+    /// by taking only the real components of all
+    /// the complex numbers
     function RealMat(A : Complex[][]) : Double[][] {
         Mapped(RealVec, A)
     }
+
+    export DotProdMatC;
 
     
 }
