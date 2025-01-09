@@ -21,6 +21,10 @@ namespace Utilities.Matrices.Multiply {
         MatMulT(A, B, 0., (x, y) -> x * y, (x, y) -> x + y)
     }
 
+    function MatMul(A : Double[][], B : Double[][]) : Double[][] {
+        DotProdMat(A, B)
+    }
+
     function DotProdMatC(A : Complex[][], B : Complex[][]) : Complex[][] {
         MatMulT(A, B, ToC(0.), (x, y) -> TimesC(x, y), (x, y) -> PlusC(x, y))
     }
