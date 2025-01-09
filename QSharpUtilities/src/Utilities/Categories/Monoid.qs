@@ -1,4 +1,4 @@
-namespace Utilities.Categories {
+namespace Utilities.Categories.Monoid {
     import Std.Arrays.*;
 
     function MonoidOp<'T>(op : ('T, 'T) -> 'T) : ('T -> 'T -> 'T) {
