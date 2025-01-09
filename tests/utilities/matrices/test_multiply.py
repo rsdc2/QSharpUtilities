@@ -25,10 +25,15 @@ def matrix_dot_product_code(m1: list[list[float]], m2: list[list[float]]) -> str
       [[3., 6.]])
     ])
 def test_matrix_dot_product_happy(m1: list[list[float]], m2: list[list[float]]):
+    # Arrange
     A = np.array(m1)
     B = np.array(m2)
+
+    # Act
     qscode = matrix_dot_product_code(m1, m2)
     R = np.array(qsharp.eval(qscode))
+
+    # Assert
     assert np.array_equal(R, A @ B)
     
     # Resulting matrix has the number of rows of the first matrix 
