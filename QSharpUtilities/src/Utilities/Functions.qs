@@ -15,4 +15,6 @@ namespace Utilities.Functions {
     function Flip2_<'T, 'U, 'V>(f : 'T -> 'U -> 'V) : 'U -> 'T -> 'V {
         y -> x -> f(x)(y)
     }
+
+    
 }

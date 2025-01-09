@@ -17,6 +17,14 @@ def test_2x2_identity():
     assert result == id2x2
     
 
+def test_create_identity():
+    qscode = (("import Utilities.Matrices.Identity.*;"
+              "IdentityMatrix(2)"))
+    
+    result = qsharp.eval(qscode)
+
+    assert result == id2x2
+
 @pytest.mark.parametrize("matrix", [
     [[1., 0.],
      [0., 1.]],

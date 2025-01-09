@@ -15,6 +15,14 @@ namespace Utilities.Vectors {
         Mapped(f, A)
     }
 
+    function EmptyT<'T>(n : Int, empty: 'T) : 'T[] {
+        mutable ts : 'T[] = [];
+        for i in 1 .. n {
+            ts += [empty];
+        }
+        ts
+    }
+
     function EqualV<'T>(pred : 'T -> 'T -> Bool, A : 'T[], B : 'T[]) : Bool {
         let partiallyApplied = Mapped(pred, A);
         let applied = Zipped(partiallyApplied, B);
