@@ -105,7 +105,7 @@ The `EqualC` function performs this comparison:
 EqualC(Complex(1., 1.), Complex(1., 1.)); // Evaluates to true
 ```
 
-### Functions
+### Higher order functions
 
 #### Curry2<'T, 'U, 'V>(f : ('T, 'U) -> 'V) : ('T -> 'U -> 'V)
 
