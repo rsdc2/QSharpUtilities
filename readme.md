@@ -54,25 +54,34 @@ The tests are written in Python and run with [`pytest`](https://docs.pytest.org/
 
 ## Using this library as a dependency in your project
 
-You can use this library as a dependency in your own project.
-
-Full instructions can be found in the [Microsoft Docs](https://learn.microsoft.com/en-us/azure/quantum/how-to-work-with-qsharp-projects?tabs=tabid-qsharp%2Ctabid-qsharp-run).
+You can use this library as a dependency in your own project. To do this, your `qsharp.json` file should (minimally) contain the following information:
 
 ```json
 {
     "author": "your-name-here",
     "dependencies": {
-        "QSharpUtilitiesDependency": {
-            "github": {
-                "owner": "rsdc2",
-                "repo": "QSharpUtilties",
-                "ref": "42fff2d",
-                "path": "QSharpUtilities"
-            }
+        "QsUtils": {
+            "path": "path/to/dependency"
         }
     }
 }
 ```
+
+To import from this library, prefix the module path you wish to import with the name for your dependency, in this case `QsUtils`, e.g.:
+
+```Q#
+
+import Std.Math.*;
+import QsUtils.Utilities.Complex.*;
+
+@EntryPoint()
+function Main() : Complex {
+    ToC(1.)
+}
+
+```
+
+Full instructions on project structure and using dependencies can be found in the [Microsoft Docs](https://learn.microsoft.com/en-us/azure/quantum/how-to-work-with-qsharp-projects?tabs=tabid-qsharp%2Ctabid-qsharp-run).
 
 ## Functions
 
