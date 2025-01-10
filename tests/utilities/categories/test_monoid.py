@@ -6,7 +6,7 @@ import numpy as np
 import pytest
 
 
-qsharp.init(project_root = "./QSharpUtilities")
+qsharp.init(project_root = "./QSharpMathUtils")
 
 def monoid_reduce_matrix_code(matrices: list[list[list[float]]]) -> str:
     return (f"import Utilities.Matrices.Constructors.*;"

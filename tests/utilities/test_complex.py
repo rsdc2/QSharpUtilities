@@ -1,6 +1,6 @@
 import qsharp # type: ignore
 import cmath
-qsharp.init(project_root = "./QSharpUtilities")
+qsharp.init(project_root = "./QSharpMathUtils")
 
 
 def test_complex_equal_happy():
