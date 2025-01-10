@@ -6,7 +6,7 @@ from .test_multiply import matrix_dot_product_code
 qsharp.init(project_root = "./QSharpUtilities")
 
 id2x2 = [[1., 0.],
-             [0., 1.]]
+        [0., 1.]]
 
 # cf. https://en.wikipedia.org/wiki/Invertible_matrix
 @pytest.mark.parametrize("matrix", [
