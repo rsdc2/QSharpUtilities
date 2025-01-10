@@ -26,13 +26,13 @@ The tests are written in Python and run with [`pytest`](https://docs.pytest.org/
 
 3. Make sure the virtual environment has been activated, e.g. on Linux:
 
-    ```
+    ```bash
     source env/bin/activate
     ```
 
 4. Install with `pip`:
 
-    ```
+    ```bash
     pip install .
     ```
 
@@ -40,7 +40,7 @@ The tests are written in Python and run with [`pytest`](https://docs.pytest.org/
 
 3. Alternatively, from within the cloned repository, install at the ```user``` level with:
 
-    ```
+    ```bash
     pip install . --user
     ```
 
@@ -48,7 +48,7 @@ The tests are written in Python and run with [`pytest`](https://docs.pytest.org/
 
 3. If you wish to install `mypy` for type checking (in addition to the other dependencies), run:
 
-    ```
+    ```bash
     pip install .[dev]
     ```
 
