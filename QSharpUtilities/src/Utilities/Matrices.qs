@@ -5,7 +5,6 @@ namespace Utilities.Matrices {
     import Utilities.Vectors.*;
 
     import Utilities.Matrices.Conjugate.*;
-    import Utilities.Matrices.Examples.*;
     import Utilities.Matrices.Identity.*;
     import Utilities.Matrices.Inverse.*;
     import Utilities.Matrices.Multiply.*;
