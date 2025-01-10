@@ -16,5 +16,6 @@ namespace Utilities.Functions {
         y -> x -> f(x)(y)
     }
 
+    export Curry2, Curry3, Flip2, Flip2_;
     
 }

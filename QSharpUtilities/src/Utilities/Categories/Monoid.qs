@@ -12,4 +12,6 @@ namespace Utilities.Categories.Monoid {
     function MonoidReduceValidate<'T>(empty : 'T, op : ('T, 'T) -> 'T, validate : 'T -> 'T): ('T[] -> 'T) {
         xs -> Fold(op, empty, Mapped(validate, xs))
     }
+
+    export MonoidOp, MonoidReduce, MonoidReduceValidate;
 }

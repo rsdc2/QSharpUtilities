@@ -27,4 +27,11 @@ namespace Utilities.Complex {
         x.Real
     }
 
+    export Conjugate, 
+        EqualC,
+        EqualC_,
+        NegC,
+        ToC,
+        Real;
+
 }
