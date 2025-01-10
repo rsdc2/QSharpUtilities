@@ -16,7 +16,7 @@ The Q# part of the program can be run in VSCode provided that the [Azure Quantum
 ### Calling Q# from Python
 
 ## Testing
-The tests are written in Python and run with [`pytest`](https://docs.pytest.org/en/stable/). To install Python with its dependencies (`pytest` and `qsharp`):
+The tests are written in Python and run with [`pytest`](https://docs.pytest.org/en/stable/). To install Python with its dependencies (`qsharp`, `numpy` and `pytest`):
 
 1. Clone or download the repository.
 
@@ -105,5 +105,6 @@ Python dependencies are the following:
 - [mypy](https://mypy.readthedocs.io/en/stable/) ([MIT](https://github.com/python/mypy/blob/master/LICENSE)) 
 - [pytest](https://docs.pytest.org/en/7.4.x/) ([MIT](https://github.com/pytest-dev/pytest/blob/main/LICENSE)). 
 - [qsharp](https://pypi.org/project/qsharp/) ([MIT](https://github.com/microsoft/qsharp?tab=MIT-1-ov-file#readme))
+- [numpy](https://numpy.org/doc/) ([BSD-3 style](https://github.com/numpy/numpy?tab=License-1-ov-file#readme))
 
 Licenses for these dependencies are included in the `LICENSES` directory.
