@@ -103,5 +103,7 @@ Q# itself is licensed under [MIT](https://github.com/microsoft/qsharp?tab=MIT-1-
 Python dependencies are the following:
 
 - [mypy](https://mypy.readthedocs.io/en/stable/) ([MIT](https://github.com/python/mypy/blob/master/LICENSE)) 
-- [pytest](https://docs.pytest.org/en/7.4.x/) ([MIT](https://github.com/pytest-dev/pytest/blob/main/LICENSE)). Licenses for these dependencies are included in the `LICENSES` directory.
+- [pytest](https://docs.pytest.org/en/7.4.x/) ([MIT](https://github.com/pytest-dev/pytest/blob/main/LICENSE)). 
 - [qsharp](https://pypi.org/project/qsharp/) ([MIT](https://github.com/microsoft/qsharp?tab=MIT-1-ov-file#readme))
+
+Licenses for these dependencies are included in the `LICENSES` directory.
