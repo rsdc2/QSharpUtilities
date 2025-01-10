@@ -20,7 +20,7 @@ keywords = ["QSharp", "Q#", "Quantum"]
 [project.optional-dependencies]
 dev = [
     "qsharp >= 1.12",
-    "pytest >= 7.4.0"
+    "pytest >= 7.4.0",
     "mypy >= 1.8"
 ]
 
