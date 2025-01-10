@@ -14,6 +14,7 @@
       "src/Utilities/Matrices/Multiply.qs",
       "src/Utilities/Matrices/Properties.qs",
       "src/Utilities/Matrices/Constructors.qs",
+      "src/Utilities/Matrices/Invert.qs",
       "src/Utilities/Testing/Assertions.qs",
       "src/Utilities/Categories/Monoid.qs"
      ],

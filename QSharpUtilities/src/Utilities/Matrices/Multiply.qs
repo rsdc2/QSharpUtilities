@@ -7,6 +7,10 @@ namespace Utilities.Matrices.Multiply {
     import Utilities.Complex.*;
     import Utilities.Matrices.Properties.*;
 
+    function ScalarMulMatT<'T>(x : 'T, A : 'T[][], mul : ('T, 'T) -> 'T) : 'T[][] {
+        Mapped(vec -> ScalarMulVecT(x, vec, mul), A)
+    }
+
     /// Multiply a matrix by a scalar complex
     function ScalarMulMatC(x : Complex, A : Complex[][]) : Complex[][] {
         Mapped(V -> ScalarMulVecC(x, V), A)

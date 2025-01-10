@@ -1,3 +1,4 @@
+import Utilities.Matrices.Invert.Invert2x2D;
 import Utilities.Vectors.RealVec;
 import Utilities.Vectors.EmptyT;
 import Utilities.Matrices.Identity.IdentityMatrix;
@@ -24,7 +25,10 @@ import Utilities.Categories.Monoid.*;
 @EntryPoint()
 function Main() :   Double[][] {
 
-    IdentityMatrix(2)
+    let matrix = [[1., 2.], [3., 4.]];
+    let matrix2 = [[-1., 3./2.], [1., -1.]];
+    // MatMul(IdentityMatrix(2), [[1., 2.], [3., 4.]])
+    MatMul(matrix2, Invert2x2D(matrix2))
 
     // Complex(1., 1.) == Complex(1., 1.)
     // RealMat(DotProdMatC(ToCMat([[1., 2.], [3., 4.]]), ToCMat([[5., 6.], [7., 8.]])))

@@ -8,6 +8,7 @@ qsharp.init(project_root = "./QSharpUtilities")
 id2x2 = [[1., 0.],
              [0., 1.]]
 
+
 def test_2x2_identity():
     qscode = ("import Utilities.Matrices.Identity.*;"
               "Id2x2()")

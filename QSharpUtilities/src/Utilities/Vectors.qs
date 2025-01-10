@@ -6,6 +6,10 @@ namespace Utilities.Vectors {
     import Utilities.Functions.*;
     import Utilities.Matrices.Properties.*;
 
+    function ScalarMulVecT<'T>(x : 'T, vec : 'T[], mul : ('T, 'T) -> 'T) : 'T[] {
+        Mapped(y -> mul(x, y), vec)
+    }
+    
     /// Multiply a complex vector by a scalar complex
     function ScalarMulVecC(x : Complex, A : Complex[]) : Complex[] {
         Mapped(y -> TimesC(x, y), A)

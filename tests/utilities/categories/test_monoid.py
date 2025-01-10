@@ -1,4 +1,4 @@
-import qsharp   # type : ignore
+import qsharp   # type: ignore
 from functools import reduce
 import operator
 import numpy as np
