@@ -8,7 +8,6 @@
       "src/Utilities/Matrices.qs",
       "src/Utilities/Vectors.qs",
       "src/Utilities/Matrices/Conjugate.qs",
-      "src/Utilities/Matrices/Examples.qs",
       "src/Utilities/Matrices/Identity.qs",
       "src/Utilities/Matrices/Inverse.qs",
       "src/Utilities/Matrices/Multiply.qs",
