@@ -1,0 +1,29 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qsharp-utilities-tests"
+requires-python = ">=3.11"
+dependencies = [
+    "qsharp >= 1.12",
+    "pytest >= 7.4.0"
+]
+version = "0.1.0"
+authors = [
+    {name = "Robert Crellin"}
+]
+keywords = ["QSharp", "Q#", "Quantum"]
+
+[project.optional-dependencies]
+dev = [
+    "qsharp >= 1.12",
+    "pytest >= 7.4.0"
+    "mypy >= 1.8"
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+exclude = ['out', 'build']
