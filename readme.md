@@ -9,7 +9,7 @@ This is a utility library I am writing as I learn Q# and quantum programming. It
 
 ## Running
 
-### VSCode with the QDK
+### With VSCode and the QDK
 
 The Q# part of the program can be run in VSCode provided that the [Azure Quantum Development Kit (QDK)](https://learn.microsoft.com/en-us/azure/quantum/install-overview-qdk) is installed. 
 
@@ -51,6 +51,28 @@ The tests are written in Python and run with [`pytest`](https://docs.pytest.org/
     ```bash
     pip install .[dev]
     ```
+
+## Using this library as a dependency in your project
+
+You can use this library as a dependency in your own project.
+
+Full instructions can be found in the [Microsoft Docs](https://learn.microsoft.com/en-us/azure/quantum/how-to-work-with-qsharp-projects?tabs=tabid-qsharp%2Ctabid-qsharp-run).
+
+```json
+{
+    "author": "your-name-here",
+    "dependencies": {
+        "QSharpUtilitiesDependency": {
+            "github": {
+                "owner": "rsdc2",
+                "repo": "QSharpUtilties",
+                "ref": "42fff2d",
+                "path": "QSharpUtilities"
+            }
+        }
+    }
+}
+```
 
 ## Functions
 
