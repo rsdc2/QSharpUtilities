@@ -80,19 +80,19 @@ EqualC(Complex(1., 1.), Complex(1., 1.)); // Evaluates to true
 
 Takes a function with a pair of parameters, and returns a curried version of it, i.e. two functions taking a single parameter each. For example, whereas `EqualC` has the type signature:
 
-```
+```Q#
 (Complex, Complex) -> Bool
 ```
 
 in the following:
 
-```
+```Q#
 let equalC = Curry2(EqualC);
 ```
 
 `equalC` has the type signature:
 
-```
+```Q#
 Complex -> Complex -> Bool
 ```
 
