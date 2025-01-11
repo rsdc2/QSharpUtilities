@@ -9,7 +9,7 @@ def test_vectors_equal():
     qscode = ("import Complex.*;"
               "import Vectors.*;"
               "let vector = [ToC(1.), ToC(2.)];"
-              "ScalarMulVecC(ToC(2.), vector);")
+              "VecMulScalarC(ToC(2.), vector);")
     # Act
     result = qsharp.eval(qscode)
 
