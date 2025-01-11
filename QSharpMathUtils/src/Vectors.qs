@@ -3,7 +3,7 @@ namespace Vectors {
     import Std.Arrays.*;
     import Std.Diagnostics.*;
     import Complex.*;
-    import Functions.*;
+    import HigherOrderFunctions.*;
     import Matrices.Properties.*;
 
     /// Multiply all the values of a vector of type 'T by a scalar of type 'T

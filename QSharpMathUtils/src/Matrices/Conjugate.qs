@@ -4,7 +4,7 @@ namespace Matrices.Conjugate {
     import Std.Core;
     import Complex.*;
     import Vectors.*;
-    import Functions.*;
+    import HigherOrderFunctions.*;
 
     function ConjugateVector(A : Complex[]) : Complex[] {
         Mapped(Conjugate, A)

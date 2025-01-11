@@ -4,7 +4,7 @@
     "files": [ 
       "src/Main.qs",
       "src/Complex.qs",
-      "src/Functions.qs",
+      "src/HigherOrderFunctions.qs",
       "src/Matrices.qs",
       "src/Vectors.qs",
       "src/Matrices/Conjugate.qs",
