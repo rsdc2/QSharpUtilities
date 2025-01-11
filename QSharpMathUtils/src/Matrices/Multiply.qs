@@ -13,7 +13,7 @@ namespace Matrices.Multiply {
 
     /// Multiply a matrix by a scalar complex
     function ScalarMulMatC(x : Complex, A : Complex[][]) : Complex[][] {
-        Mapped(V -> ScalarMulVecC(x, V), A)
+        Mapped(V -> VecMulScalarC(x, V), A)
     }
 
     function MatMulT<'T>(A : 'T[][], B : 'T[][], empty : 'T, mul : ('T, 'T) -> 'T, add : ('T, 'T) -> 'T) : 'T[][] {
