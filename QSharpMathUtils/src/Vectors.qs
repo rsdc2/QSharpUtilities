@@ -11,7 +11,7 @@ namespace Vectors {
     }
     
     /// Multiply a complex vector by a scalar complex
-    function ScalarMulVecC(x : Complex, A : Complex[]) : Complex[] {
+    function VecMulScalarC(x : Complex, A : Complex[]) : Complex[] {
         Mapped(y -> TimesC(x, y), A)
     }
 
@@ -19,7 +19,8 @@ namespace Vectors {
         Mapped(f, A)
     }
 
-    function EmptyT<'T>(n : Int, empty: 'T) : 'T[] {
+    /// Create an empty vector of length `n` of type `'T`
+    function EmptyVecT<'T>(n : Int, empty: 'T) : 'T[] {
         mutable ts : 'T[] = [];
         for i in 1 .. n {
             ts += [empty];
