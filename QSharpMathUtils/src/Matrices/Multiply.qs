@@ -1,11 +1,11 @@
-namespace Utilities.Matrices.Multiply {
+namespace Matrices.Multiply {
     import Std.Arrays.Transposed;
     import Std.Arrays.*;
     import Std.Math.*;
     import Std.Diagnostics.*;
-    import Utilities.Vectors.*;
-    import Utilities.Complex.*;
-    import Utilities.Matrices.Properties.*;
+    import Vectors.*;
+    import Complex.*;
+    import Matrices.Properties.*;
 
     function ScalarMulMatT<'T>(x : 'T, A : 'T[][], mul : ('T, 'T) -> 'T) : 'T[][] {
         Mapped(vec -> ScalarMulVecT(x, vec, mul), A)

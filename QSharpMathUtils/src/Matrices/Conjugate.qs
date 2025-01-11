@@ -1,10 +1,10 @@
-namespace Utilities.Matrices.Conjugate {
+namespace Matrices.Conjugate {
     import Std.Math.Complex;
     import Std.Arrays.*;
     import Std.Core;
-    import Utilities.Complex.*;
-    import Utilities.Vectors.*;
-    import Utilities.Functions.*;
+    import Complex.*;
+    import Vectors.*;
+    import Functions.*;
 
     newtype cls = (
         x : Int,

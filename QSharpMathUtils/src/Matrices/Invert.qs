@@ -1,9 +1,9 @@
-namespace Utilities.Matrices.Invert {
-    import Utilities.Matrices.Multiply.ScalarMulMatT;
+namespace Matrices.Invert {
     import Std.Diagnostics.*;
     import Std.Arrays.*;
-    import Utilities.Matrices.Properties.*;
-    import Utilities.Categories.Monoid.*;
+    import Matrices.Properties.*;
+    import Categories.Monoid.*;
+    import Matrices.Multiply.*;
 
     function Determinant2x2D(matrix : Double[][]) : Double {
         Fact(Shape(matrix) == (2, 2), "Must be a 2x2 matrix.");

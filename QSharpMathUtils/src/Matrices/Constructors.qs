@@ -1,12 +1,12 @@
-namespace Utilities.Matrices.Constructors {
+namespace Matrices.Constructors {
     import Std.Diagnostics.*;
     import Std.Arrays.*;
     import Std.Convert.*;
-    import Utilities.Matrices.Properties.*;
-    import Utilities.Matrices.Identity.IdentityMatrix;
-    import Utilities.Categories.Monoid.*;
-    import Utilities.Matrices.Multiply.*;
-
+    import Matrices.Properties.*;
+    import Matrices.Identity.*;
+    import Matrices.Multiply.*;
+    import Categories.Monoid.*;
+    
     newtype Matrix = Double[][];
 
     function MonoidReduceMatrix(n : Int) : (Double[][][] -> Double[][]) {

@@ -1,4 +1,4 @@
-namespace Utilities.Complex {
+namespace Complex {
     import Std.Math.*;
 
     /// Return the conjugate of a complex number

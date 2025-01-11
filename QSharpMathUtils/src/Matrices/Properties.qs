@@ -1,4 +1,4 @@
-namespace Utilities.Matrices.Properties {
+namespace Matrices.Properties {
     import Std.Arrays.*;
     import Std.Diagnostics.*;
 

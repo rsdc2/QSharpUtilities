@@ -1,7 +1,7 @@
-namespace Utilities.Matrices.Examples {
+namespace Matrices.Examples {
     import Std.Math.*;
-    import Utilities.Matrices.ToCMat;
-    import Utilities.Complex.*;
+    import Matrices.ToCMat;
+    import Complex.*;
 
     function Ex2x2() : Complex[][] {
         let mat = [[3., 1.],

@@ -1,6 +1,6 @@
-namespace Utilities.Matrices.Identity {
+namespace Matrices.Identity {
     import Std.Arrays.*;
-    import Utilities.Vectors.*;
+    import Vectors.*;
 
     function Id2x2() : Double[][] {
         [[1., 0.],

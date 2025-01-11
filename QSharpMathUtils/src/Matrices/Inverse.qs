@@ -1,10 +1,10 @@
-namespace Utilities.Matrices.Inverse {
+namespace Matrices.Inverse {
 
     import Std.Diagnostics.*;
     import Std.Arrays.*;
     import Std.Math.*;
-    import Utilities.Complex.*;
-    import Utilities.Matrices.Multiply.*;
+    import Complex.*;
+    import Matrices.Multiply.*;
 
     /// # Summary
     /// Invert a 2x2 matrix

@@ -1,4 +1,4 @@
-namespace Utilities.Functions {
+namespace Functions {
 
     function Curry2<'T, 'U, 'V>(f : ('T, 'U) -> 'V) : ('T -> 'U -> 'V) {
         x -> y -> f(x, y)

@@ -1,15 +1,16 @@
-import Utilities.Matrices.Invert.Invert2x2D;
-import Utilities.Vectors.RealVec;
-import Utilities.Vectors.EmptyT;
-import Utilities.Matrices.Identity.IdentityMatrix;
 import Std.Core;
 import Std.Math.*;
 import Std.Arrays.*;
 import Std.Diagnostics.*;
-import Utilities.Complex.*;
-import Utilities.Matrices.*;
-import Utilities.Matrices.Multiply.*;
-import Utilities.Categories.Monoid.*;
+
+import Vectors.RealVec;
+import Vectors.EmptyT;
+import Matrices.*;
+import Matrices.Invert.*;
+import Matrices.Identity.*;
+import Matrices.Multiply.*;
+import Complex.*;
+import Categories.Monoid.*;
 
 @EntryPoint()
 function Main() :   Double[][] {

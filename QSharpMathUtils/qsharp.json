@@ -3,19 +3,20 @@
     "license": "MIT",
     "files": [ 
       "src/Main.qs",
-      "src/Utilities/Complex.qs",
-      "src/Utilities/Functions.qs",
-      "src/Utilities/Matrices.qs",
-      "src/Utilities/Vectors.qs",
-      "src/Utilities/Matrices/Conjugate.qs",
-      "src/Utilities/Matrices/Identity.qs",
-      "src/Utilities/Matrices/Inverse.qs",
-      "src/Utilities/Matrices/Multiply.qs",
-      "src/Utilities/Matrices/Properties.qs",
-      "src/Utilities/Matrices/Constructors.qs",
-      "src/Utilities/Matrices/Invert.qs",
-      "src/Utilities/Testing/Assertions.qs",
-      "src/Utilities/Categories/Monoid.qs"
+      "src/Complex.qs",
+      "src/Functions.qs",
+      "src/Matrices.qs",
+      "src/Vectors.qs",
+      "src/Matrices/Conjugate.qs",
+      "src/Matrices/Examples.qs",
+      "src/Matrices/Identity.qs",
+      "src/Matrices/Inverse.qs",
+      "src/Matrices/Multiply.qs",
+      "src/Matrices/Properties.qs",
+      "src/Matrices/Constructors.qs",
+      "src/Matrices/Invert.qs",
+      "src/Testing/Assertions.qs",
+      "src/Categories/Monoid.qs"
      ],
     "lints": [
         {

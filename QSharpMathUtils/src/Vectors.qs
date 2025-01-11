@@ -1,10 +1,10 @@
-namespace Utilities.Vectors {
+namespace Vectors {
     import Std.Math.*;
     import Std.Arrays.*;
     import Std.Diagnostics.*;
-    import Utilities.Complex.*;
-    import Utilities.Functions.*;
-    import Utilities.Matrices.Properties.*;
+    import Complex.*;
+    import Functions.*;
+    import Matrices.Properties.*;
 
     function ScalarMulVecT<'T>(x : 'T, vec : 'T[], mul : ('T, 'T) -> 'T) : 'T[] {
         Mapped(y -> mul(x, y), vec)
