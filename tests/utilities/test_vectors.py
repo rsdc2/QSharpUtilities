@@ -1,5 +1,7 @@
 import qsharp # type: ignore
-qsharp.init(project_root = "./QSharpMathUtils")
+from .setup import init_qsharp
+
+init_qsharp()
 
 def test_vectors_equal():
 

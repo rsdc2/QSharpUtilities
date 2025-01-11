@@ -1,12 +1,13 @@
-import qsharp   # type: ignore
 from functools import reduce
 import operator
+
 import numpy as np
-
 import pytest
+import qsharp   # type: ignore
 
+from ..setup import init_qsharp
 
-qsharp.init(project_root = "./QSharpMathUtils")
+init_qsharp()
 
 def monoid_reduce_matrix_code(matrices: list[list[list[float]]]) -> str:
     return (f"import Utilities.Matrices.Constructors.*;"

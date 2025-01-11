@@ -1,6 +1,8 @@
 import qsharp # type: ignore
 import pytest
-qsharp.init(project_root = "./QSharpMathUtils")
+from ..setup import init_qsharp
+
+init_qsharp()
 
 @pytest.mark.parametrize(("m", "shape"), [
     ([[1., 2.], 

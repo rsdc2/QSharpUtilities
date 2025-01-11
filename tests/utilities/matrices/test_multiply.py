@@ -2,7 +2,9 @@ import qsharp # type: ignore
 import numpy as np
 import pytest
 
-qsharp.init(project_root = "./QSharpMathUtils")
+from ..setup import init_qsharp
+
+init_qsharp()
 
 def matrix_dot_product_code(m1: list[list[float]], m2: list[list[float]]) -> str:
     return (f"import Utilities.Matrices.*;"

@@ -1,7 +1,7 @@
 import qsharp # type: ignore
-import cmath
-qsharp.init(project_root = "./QSharpMathUtils")
+from .setup import init_qsharp
 
+init_qsharp()
 
 def test_complex_equal_happy():
     # Arrange
