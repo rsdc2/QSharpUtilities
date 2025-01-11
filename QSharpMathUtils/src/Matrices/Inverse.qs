@@ -18,6 +18,8 @@ namespace Matrices.Inverse {
         let det = DividedByC(ToC(1.), MinusC(TimesC(a, d), TimesC(b, c)));
         let B = [[d, NegC(b)],
                  [NegC(c), a]];
-        ScalarMulMatC(det, B)
+        MatMulScalarC(det, B)
     }
+
+    export Inverted2x2;
 }

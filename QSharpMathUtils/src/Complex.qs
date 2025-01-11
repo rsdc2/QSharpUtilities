@@ -3,6 +3,7 @@ namespace Complex {
 
     /// Return the conjugate of a complex number
     function Conjugate(complex : Complex) : Complex {
+        
         complex w/ Imag <- -complex.Imag
     }
 

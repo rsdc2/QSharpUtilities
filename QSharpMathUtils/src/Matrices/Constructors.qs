@@ -11,7 +11,9 @@ namespace Matrices.Constructors {
 
     function MonoidReduceMatrix(n : Int) : (Double[][][] -> Double[][]) {
         let validate : Double[][] -> Double[][] = M -> IsSquareArray(M) and Shape(M) == (n, n) ? M | fail $"Must be square array with height / width of {n}";
-        MonoidReduceValidate(IdentityMatrix(n), MatMul, validate)
+        MonoidReduceValidate(IdentityMatrix(n), MatMulD, validate)
     }
+
+    export MonoidReduceMatrix;
 
 }

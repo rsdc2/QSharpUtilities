@@ -6,11 +6,6 @@ namespace Matrices.Conjugate {
     import Vectors.*;
     import Functions.*;
 
-    newtype cls = (
-        x : Int,
-        y : Int
-    );
-
     function ConjugateVector(A : Complex[]) : Complex[] {
         Mapped(Conjugate, A)
     }
@@ -29,8 +24,8 @@ namespace Matrices.Conjugate {
 
     /// Return true if all the values of two complex matrices are equal
     function MatricesEqualC(A : Complex[][], B: Complex[][]) : Bool {
-        let equal = Curry2(EqualVectorsC);
-        EqualV(equal, A, B)
+        let equal = Curry2(VectorsEqualC);
+        VectorsEqual(equal, A, B)
     }
 
     function IsHermitian(A : Complex[][]) : Bool {
@@ -40,4 +35,11 @@ namespace Matrices.Conjugate {
     // function IsUnitary(A : Complex[][]) : Bool {
 
     // }
+
+    export ConjugateVector, 
+            ConjugateMatrix, 
+            ConjugateTranspose, 
+            GetAdjoint, 
+            MatricesEqualC, 
+            IsHermitian;
 }

@@ -7,12 +7,12 @@ namespace Matrices.Multiply {
     import Complex.*;
     import Matrices.Properties.*;
 
-    function ScalarMulMatT<'T>(x : 'T, A : 'T[][], mul : ('T, 'T) -> 'T) : 'T[][] {
-        Mapped(vec -> ScalarMulVecT(x, vec, mul), A)
+    function MatMulScalarT<'T>(x : 'T, A : 'T[][], mul : ('T, 'T) -> 'T) : 'T[][] {
+        Mapped(vec -> VecMulScalarT(x, vec, mul), A)
     }
 
     /// Multiply a matrix by a scalar complex
-    function ScalarMulMatC(x : Complex, A : Complex[][]) : Complex[][] {
+    function MatMulScalarC(x : Complex, A : Complex[][]) : Complex[][] {
         Mapped(V -> VecMulScalarC(x, V), A)
     }
 
@@ -21,12 +21,8 @@ namespace Matrices.Multiply {
         Transposed(Mapped(DotProdVecMatT(A, _, empty, mul, add), Columns(B)))
     }
 
-    function DotProdMat(A : Double[][], B : Double[][]) : Double[][] {
+    function MatMulD(A : Double[][], B : Double[][]) : Double[][] {
         MatMulT(A, B, 0., (x, y) -> x * y, (x, y) -> x + y)
-    }
-
-    function MatMul(A : Double[][], B : Double[][]) : Double[][] {
-        DotProdMat(A, B)
     }
 
     function DotProdMatC(A : Complex[][], B : Complex[][]) : Complex[][] {

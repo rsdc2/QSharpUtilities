@@ -22,6 +22,8 @@ namespace Matrices.Invert {
         let (a, b, c, d) = (matrix[0][0], matrix[0][1], matrix[1][0], matrix[1][1]);
         let adj = [[d, -b], [-c, a]];
 
-        ScalarMulMatT(determinant, adj, (x, y) -> x * y)     
+        MatMulScalarT(determinant, adj, (x, y) -> x * y)     
     }
+
+    export Determinant2x2D, Invert2x2D;
 }

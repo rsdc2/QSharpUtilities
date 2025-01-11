@@ -16,4 +16,6 @@ namespace Matrices.Identity {
         m
     }
 
+    export Id2x2, IdentityMatrix;
+
 }

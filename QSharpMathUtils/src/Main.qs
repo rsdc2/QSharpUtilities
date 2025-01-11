@@ -3,7 +3,7 @@ import Std.Math.*;
 import Std.Arrays.*;
 import Std.Diagnostics.*;
 
-import Vectors.RealVec;
+import Vectors.ToVecReal;
 import Vectors.EmptyVecT;
 import Matrices.*;
 import Matrices.Invert.*;
@@ -17,7 +17,7 @@ function Main() :   Double[][] {
 
     let matrix = [[1., 2.], [3., 4.]];
     let matrix2 = [[-1., 3./2.], [1., -1.]];
-    MatMul(matrix2, Invert2x2D(matrix2))
+    MatMulD(matrix2, Invert2x2D(matrix2))
 
 }
 

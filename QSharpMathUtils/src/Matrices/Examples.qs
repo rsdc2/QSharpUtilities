@@ -9,4 +9,6 @@ namespace Matrices.Examples {
         ToCMat(mat)
     }
 
+    export Ex2x2;
+
 }
