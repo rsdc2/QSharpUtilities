@@ -4,7 +4,7 @@ import Std.Arrays.*;
 import Std.Diagnostics.*;
 
 import Vectors.RealVec;
-import Vectors.EmptyT;
+import Vectors.EmptyVecT;
 import Matrices.*;
 import Matrices.Invert.*;
 import Matrices.Identity.*;
