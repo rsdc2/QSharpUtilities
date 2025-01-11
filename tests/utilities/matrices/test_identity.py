@@ -1,6 +1,5 @@
-import qsharp # type: ignore
+import qsharp 
 import pytest
-import numpy as np
 
 from .test_multiply import matrix_dot_product_code
 from ..setup import init_qsharp
@@ -8,11 +7,11 @@ from ..setup import init_qsharp
 init_qsharp()
 
 id2x2 = [[1., 0.],
-             [0., 1.]]
+         [0., 1.]]
 
 
 def test_2x2_identity():
-    qscode = ("import Utilities.Matrices.Identity.*;"
+    qscode = ("import Matrices.Identity.*;"
               "Id2x2()")
 
     result = qsharp.eval(qscode)
@@ -21,7 +20,7 @@ def test_2x2_identity():
     
 
 def test_create_identity():
-    qscode = (("import Utilities.Matrices.Identity.*;"
+    qscode = (("import Matrices.Identity.*;"
               "IdentityMatrix(2)"))
     
     result = qsharp.eval(qscode)

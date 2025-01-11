@@ -10,8 +10,8 @@ from ..setup import init_qsharp
 init_qsharp()
 
 def monoid_reduce_matrix_code(matrices: list[list[list[float]]]) -> str:
-    return (f"import Utilities.Matrices.Constructors.*;"
-            f"import Utilities.Matrices.Identity.*;"
+    return (f"import Matrices.Constructors.*;"
+            f"import Matrices.Identity.*;"
               f"MonoidReduceMatrix(2)({matrices});")
 
 

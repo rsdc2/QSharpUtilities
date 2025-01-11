@@ -6,7 +6,7 @@ init_qsharp()
 def test_complex_equal_happy():
     # Arrange
     qscode = ("import Std.Math.*;"
-             "import Utilities.Complex.*;"
+             "import Complex.*;"
              "EqualC(Complex(1., 0.), Complex(1., 0.));")
 
     # Act
@@ -19,7 +19,7 @@ def test_complex_equal_happy():
 def test_complex_equal_sad():
     # Arrange
     qscode = ("import Std.Math.*;"
-             "import Utilities.Complex.*;"
+             "import Complex.*;"
              "EqualC(Complex(1., 0.), Complex(1., 1.));")
 
     # Act
@@ -31,7 +31,7 @@ def test_complex_equal_sad():
 
 def test_to_complex():
     # Arrange
-    qscode = ("import Utilities.Complex.*;"
+    qscode = ("import Complex.*;"
               "ToC(1.3)")
     
     # Act

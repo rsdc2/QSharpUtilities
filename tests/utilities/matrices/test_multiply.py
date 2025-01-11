@@ -7,8 +7,8 @@ from ..setup import init_qsharp
 init_qsharp()
 
 def matrix_dot_product_code(m1: list[list[float]], m2: list[list[float]]) -> str:
-    return (f"import Utilities.Matrices.*;"
-              "import Utilities.Matrices.Multiply.*;"
+    return (f"import Matrices.*;"
+              "import Matrices.Multiply.*;"
               f"DotProdMat({m1}, {m2});")
 
 @pytest.mark.parametrize(("m1", "m2"), [

@@ -20,8 +20,8 @@ id2x2 = [[1., 0.],
      [3., 4.]]
 ])
 def test_apply_2x2_identity_happy(matrix: list[list[float]]):
-    qscode = ("import Utilities.Matrices.Invert.*;"
-              "import Utilities.Matrices.Multiply.*;"
+    qscode = ("import Matrices.Invert.*;"
+              "import Matrices.Multiply.*;"
               f"MatMul(Invert2x2D({matrix}), {matrix});")
 
     result = qsharp.eval(qscode)

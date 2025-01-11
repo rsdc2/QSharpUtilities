@@ -6,8 +6,8 @@ init_qsharp()
 def test_vectors_equal():
 
     # Arrange
-    qscode = ("import Utilities.Complex.*;"
-              "import Utilities.Vectors.*;"
+    qscode = ("import Complex.*;"
+              "import Vectors.*;"
               "let vector = [ToC(1.), ToC(2.)];"
               "ScalarMulVecC(ToC(2.), vector);")
     # Act

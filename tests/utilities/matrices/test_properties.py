@@ -11,7 +11,7 @@ init_qsharp()
       [1., 2., 3.]], (2, 3))
 ])
 def test_shape(m: list[list[float]], shape: tuple[int, int]):
-    qscode = ("import Utilities.Matrices.Properties.*;"
+    qscode = ("import Matrices.Properties.*;"
               f"Shape({m})")
 
     result = qsharp.eval(qscode)
