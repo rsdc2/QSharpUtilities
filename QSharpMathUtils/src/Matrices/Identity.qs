@@ -8,7 +8,6 @@ namespace Matrices.Identity {
     }
 
     function IdentityMatrix(n : Int) : Double[][] {
-        // Mapped(y -> Mapped(x -> x == y ? 1. | 0., [0..n]), [0..n])
         let emptyRow = Enumerated(EmptyVecT(n, 0.)); 
         let emptyMatrix = Enumerated(EmptyVecT(n, emptyRow));
         
