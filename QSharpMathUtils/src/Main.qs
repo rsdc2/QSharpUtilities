@@ -14,17 +14,15 @@ import Categories.Monoid.*;
 import HigherOrderFunctions.*;
 
 @EntryPoint()
-function Main() : Int {
-    let add : (Int, Int) -> Int = (x, y) -> x + y;
-    let mul3 : Int -> Int = x -> x * 3;
-
-    let f = Composed2(add(1, _), mul3);
-    f(1)
-
+function Main() : Complex {
+    MonoidReduce(MonoidMulC(), [Complex(1., 3.), Complex(1., 0.), Complex(1., 0.)])
 }
 
+
 function TestMonoidReduce() : (Int, Int) {
-    let sum = MonoidReduce(0, (x, y) -> x + y);
-    let product = MonoidReduce(1, (x, y) -> x * y);
+    let monoidSum = Monoid((x, y) -> x + y, 0);
+    let monoidProd = Monoid((x, y) -> x * y, 1);
+    let sum = MonoidReduce(monoidSum, _);
+    let product = MonoidReduce(monoidProd, _);
     (product([1, 2, 3, 4]), sum([1, 2, 3, 4]))
 }

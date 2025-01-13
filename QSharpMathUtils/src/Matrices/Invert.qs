@@ -11,7 +11,8 @@ namespace Matrices.Invert {
         let diag1 = [matrix[0][0], matrix[1][1]];
         let diag2 = [matrix[0][1], matrix[1][0]];
 
-        let product = MonoidReduce(1., (x, y) -> x * y);
+        let monoidProd = Monoid((x, y) -> x * y, 1.);
+        let product = MonoidReduce(monoidProd, _);
         let determinant = 1. / (product(diag1) - product(diag2));
         determinant
     }

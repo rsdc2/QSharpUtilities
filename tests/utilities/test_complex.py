@@ -1,4 +1,4 @@
-import qsharp # type: ignore
+import qsharp 
 from .setup import init_qsharp
 
 init_qsharp()
@@ -39,3 +39,16 @@ def test_to_complex():
 
     # Assert
     assert result == (1.3, 0.0)
+
+
+def test_monoid_mul_c():
+    # Arrange
+    qscode = ("import Complex.*;"
+              "import Categories.Monoid.*;"
+              "MonoidReduce(MonoidMulC(), [Complex(1., 3.), Complex(1., 0.), Complex(1., 0.)])")
+    
+    # Act
+    result = qsharp.eval(qscode)
+
+    # Assert
+    assert result == (1., 3.)

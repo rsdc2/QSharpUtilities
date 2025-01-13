@@ -12,7 +12,7 @@ init_qsharp()
 def monoid_reduce_matrix_code(matrices: list[list[list[float]]]) -> str:
     return (f"import Matrices.Constructors.*;"
             f"import Matrices.Identity.*;"
-              f"MonoidReduceMatrixD(2)({matrices});")
+              f"MonoidReduceMatMulD(2, {matrices});")
 
 
 @pytest.mark.parametrize("matrices", [
