@@ -1,5 +1,13 @@
 namespace HigherOrderFunctions {
 
+    function Composed2<'T, 'U, 'V>(f1 : 'U -> 'V, f2 : 'T -> 'U) : ('T -> 'V) {
+        x -> f1(f2(x))
+    } 
+
+    function Composed3<'T, 'U, 'V, 'W>(f1 : 'V -> 'W, f2 : 'U -> 'V, f3 : 'T -> 'U) : ('T -> 'W) {
+        x -> f1(f2(f3(x)))
+    }
+
     function Curry2<'T, 'U, 'V>(f : ('T, 'U) -> 'V) : ('T -> 'U -> 'V) {
         x -> y -> f(x, y)
     }
@@ -16,6 +24,6 @@ namespace HigherOrderFunctions {
         y -> x -> f(x)(y)
     }
 
-    export Curry2, Curry3, Flip2, Flip2_;
+    export Composed2, Composed3, Curry2, Curry3, Flip2, Flip2_;
     
 }

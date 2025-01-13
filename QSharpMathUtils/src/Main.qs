@@ -11,13 +11,15 @@ import Matrices.Identity.*;
 import Matrices.Multiply.*;
 import Complex.*;
 import Categories.Monoid.*;
+import HigherOrderFunctions.*;
 
 @EntryPoint()
-function Main() :   Double[][] {
+function Main() : Int {
+    let add : (Int, Int) -> Int = (x, y) -> x + y;
+    let mul3 : Int -> Int = x -> x * 3;
 
-    let matrix = [[1., 2.], [3., 4.]];
-    let matrix2 = [[-1., 3./2.], [1., -1.]];
-    MatMulD(matrix2, Invert2x2D(matrix2))
+    let f = Composed2(add(1, _), mul3);
+    f(1)
 
 }
 
