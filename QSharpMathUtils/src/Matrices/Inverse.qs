@@ -13,6 +13,7 @@ namespace Matrices.Inverse {
         A[0][0] * A[1][1] - A[0][1] * A[1][0]
     }
 
+    /// Return the determinant of a 2x2 matrix of type Complex
     function Determinant2x2C(A : Complex[][]) : Complex {
         Fact(Shape(A) == (2, 2), "Must be a 2x2 matrix");
         MinusC(TimesC(A[0][0], A[1][1]), TimesC(A[0][1], A[1][0]))
