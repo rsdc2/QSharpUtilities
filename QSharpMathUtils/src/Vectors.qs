@@ -6,6 +6,12 @@ namespace Vectors {
     import HigherOrderFunctions.*;
     import Matrices.Properties.*;
 
+
+    /// Find the conjugate of the values of a complex vector
+    function ConjugateVector(A : Complex[]) : Complex[] {
+        Mapped(Conjugate, A)
+    }
+
     /// Multiply all the values of a vector of type 'T by a scalar of type 'T
     function VecMulScalarT<'T>(x : 'T, vec : 'T[], mul : ('T, 'T) -> 'T) : 'T[] {
         Mapped(y -> mul(x, y), vec)

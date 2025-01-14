@@ -1,14 +1,10 @@
-namespace Matrices.Conjugate {
+namespace Matrices.Complex.Conjugate {
     import Std.Math.Complex;
     import Std.Arrays.*;
     import Std.Core;
     import Complex.*;
     import Vectors.*;
     import HigherOrderFunctions.*;
-
-    function ConjugateVector(A : Complex[]) : Complex[] {
-        Mapped(Conjugate, A)
-    }
 
     function ConjugateMatrix(A : Complex[][]) : Complex[][] {
         Mapped(ConjugateVector, A)

@@ -7,7 +7,7 @@
       "src/HigherOrderFunctions.qs",
       "src/Matrices.qs",
       "src/Vectors.qs",
-      "src/Matrices/Conjugate.qs",
+      "src/Matrices/Complex/Conjugate.qs",
       "src/Matrices/Examples.qs",
       "src/Matrices/Identity.qs",
       "src/Matrices/Inverse.qs",

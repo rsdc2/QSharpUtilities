@@ -4,7 +4,7 @@ namespace Matrices {
 
     import Vectors.*;
 
-    import Matrices.Conjugate.*;
+    import Matrices.Complex.Conjugate.*;
     import Matrices.Identity.*;
     import Matrices.Inverse.*;
     import Matrices.Multiply.*;
