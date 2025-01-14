@@ -6,6 +6,8 @@ namespace Matrices.Complex.Conjugate {
     import Vectors.*;
     import HigherOrderFunctions.*;
 
+    /// Find the conjugate of all the values in a complex valued matrix
+    /// And return as a complex valued matrix
     function ConjugateMatrix(A : Complex[][]) : Complex[][] {
         Mapped(ConjugateVector, A)
     }
