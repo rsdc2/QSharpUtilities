@@ -1,9 +1,7 @@
 namespace Matrices.Inverse {
-
     import Std.Diagnostics.*;
     import Std.Arrays.*;
-    import Std.Math.*;
-    import Complex.*;
+    import Categories.Monoid.*;
     import Matrices.Properties.*;
     import Matrices.Multiply.*;
 
@@ -12,27 +10,21 @@ namespace Matrices.Inverse {
         Fact(Shape(A) == (2, 2), "Must be a 2x2 matrix");
         A[0][0] * A[1][1] - A[0][1] * A[1][0]
     }
-
-    /// Return the determinant of a 2x2 matrix of type Complex
-    function Determinant2x2C(A : Complex[][]) : Complex {
+    
+    /// Return true if it is possible to invert the Double-valued matrix.
+    /// At the moment only handles 2x2 matrices.
+    function IsInvertibleD(A : Double[][]) : Bool {
         Fact(Shape(A) == (2, 2), "Must be a 2x2 matrix");
-        MinusC(TimesC(A[0][0], A[1][1]), TimesC(A[0][1], A[1][0]))
+        Determinant2x2D(A) != 0.
     }
 
-    /// # Summary
-    /// Invert a 2x2 matrix
-    function Inverted2x2(A : Complex[][]) : Complex[][] {
-        Fact(Length(A) == 2 and Length(ColumnAt(0, A)) == 2, "Must be a 2x2 matrix");
-        let a = A[0][0];
-        let b = A[0][1];
-        let c = A[1][0];
-        let d = A[1][1];
-
-        let detdiv = DividedByC(ToC(1.), Determinant2x2C(A));
-        let B = [[d, NegC(b)],
-                 [NegC(c), a]];
-        MatMulScalarC(detdiv, B)
+    function Inverted2x2D(A : Double[][]) : Double[][] {
+        Fact(IsInvertibleD(A), "Matrix must be invertible");
+        let (a, b, c, d) = (A[0][0], A[0][1], A[1][0], A[1][1]);
+        let adj = [[d, -b], [-c, a]];
+        let determinant = Determinant2x2D(A);
+        MatMulScalarT(1./determinant, adj, (x, y) -> x * y)     
     }
-
-    export Determinant2x2C, Determinant2x2D, Inverted2x2;
+    
+    export Determinant2x2D, IsInvertibleD, Inverted2x2D;
 }

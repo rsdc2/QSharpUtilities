@@ -1,0 +1,19 @@
+namespace Matrices.Complex.Unitary {
+    import Matrices.Complex.Comparison.MatricesEqualC;
+    import Std.Diagnostics.*;
+    import Std.Math.*;
+    import Matrices.Complex.AdjointM.*;
+    import Matrices.Complex.Inverse.*;
+
+    /// Return true if the matrix is unitary, i.e. 
+    /// both invertible and its inverse is equal
+    /// to its adjoint
+    function IsUnitary(A : Complex[][]) : Bool {
+        if not IsInvertibleC(A) { return false }
+        
+        let adj = GetAdjoint(A);
+        let inverse = Inverted2x2C(A);
+        MatricesEqualC(adj, inverse)
+    }
+
+}

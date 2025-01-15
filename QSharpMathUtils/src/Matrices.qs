@@ -9,6 +9,7 @@ namespace Matrices {
     import Matrices.Inverse.*;
     import Matrices.Multiply.*;
     
+    /// Convert a Double-valued matrix to its Complex-valued counterpart 
     function ToCMat(A : Double[][]) : Complex[][] {
         Mapped(ToVecC, A)
     }   
@@ -16,11 +17,11 @@ namespace Matrices {
     /// Convert a complex matrix into a real matrix
     /// by taking only the real components of all
     /// the complex numbers
-    function RealMat(A : Complex[][]) : Double[][] {
+    function ToRealMat(A : Complex[][]) : Double[][] {
         Mapped(ToVecReal, A)
     }
 
-    export DotProdMatC;
+    export ToCMat, ToRealMat;
 
     
 }

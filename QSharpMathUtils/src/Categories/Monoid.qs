@@ -1,7 +1,7 @@
 namespace Categories.Monoid {
     import Std.Arrays.*;
 
-    // Return a generic monoid instance as a tuple 
+    // Return an instance of the monoid type class as a tuple 
     // comprising the monoid operation and the empty
     // value
     function Monoid<'T>(op: ('T, 'T) -> 'T, empty: 'T) : (('T, 'T) -> 'T, 'T) {
