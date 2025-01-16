@@ -1,9 +1,6 @@
-import qsharp # type: ignore
+import qsharp 
 import pytest
 from math import sqrt
-# from cmath import complex
-
-
 from ..setup import init_qsharp
 
 init_qsharp()
