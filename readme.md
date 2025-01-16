@@ -5,7 +5,7 @@ This is a utility library I am writing as I learn Q# and quantum programming. It
 - Complex numbers: `Complex.qs`, namespace `Utilities.Complex`
 - Vectors: `Vectors.qs`, namespace `Utilities.Vectors`
 - Matrices: `Matrices.qs` and the `Matrices` folder, namespace `Utilities.Matrices`
-- Functions: `Functions.qs`
+- Higher order functions: `HigherOrderFunctions.qs`
 
 ## Running
 
