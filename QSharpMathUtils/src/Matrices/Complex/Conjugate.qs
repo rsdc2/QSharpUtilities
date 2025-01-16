@@ -11,6 +11,8 @@ namespace Matrices.Complex.Conjugate {
     function ConjugateMatrix(A : Complex[][]) : Complex[][] {
         Mapped(ConjugateVector, A)
     }
+    
+    // function ConjugateMatrixC
 
     function ConjugateTranspose(A : Complex[][]) : Complex[][] {
         Transposed(ConjugateMatrix(A))

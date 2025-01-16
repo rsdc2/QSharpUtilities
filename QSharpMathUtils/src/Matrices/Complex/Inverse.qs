@@ -6,6 +6,7 @@ namespace Matrices.Complex.Inverse {
     import Complex.*;
     import Matrices.Properties.*;
     import Matrices.Complex.Multiply.*;
+    import Matrices.Complex.Types.*;
 
     /// Return the determinant of a 2x2 matrix of type Complex
     function Determinant2x2C(A : Complex[][]) : Complex {
@@ -32,7 +33,11 @@ namespace Matrices.Complex.Inverse {
         let detdiv = DividedByC(ToC(1.), Determinant2x2C(A));
         let B = [[d, NegC(b)],
                  [NegC(c), a]];
-        MatMulScalarC(detdiv, B)
+        MatMulCScalarC(detdiv, B)
+    }
+
+    function Inverted2x2MatrixC(A : MatrixC) : MatrixC {
+        MatrixC(A.scalar, Inverted2x2C(A.matrix))
     }
 
     export Determinant2x2C, Inverted2x2C;

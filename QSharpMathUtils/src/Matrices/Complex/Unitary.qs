@@ -4,6 +4,7 @@ namespace Matrices.Complex.Unitary {
     import Std.Math.*;
     import Matrices.Complex.AdjointM.*;
     import Matrices.Complex.Inverse.*;
+    import Matrices.Complex.Comparison.*;
 
     /// Return true if the matrix is unitary, i.e. 
     /// both invertible and its inverse is equal
@@ -13,7 +14,7 @@ namespace Matrices.Complex.Unitary {
         
         let adj = GetAdjoint(A);
         let inverse = Inverted2x2C(A);
-        MatricesEqualC(adj, inverse)
+        MatricesApproxEqualC(adj, inverse, 2)
     }
 
 }

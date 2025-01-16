@@ -36,7 +36,7 @@ namespace Vectors {
     }
 
     /// Returns true if all the values are equal and in the same order in two vectors
-    function VectorsEqual<'T>(pred : 'T -> 'T -> Bool, A : 'T[], B : 'T[]) : Bool {
+    function VectorsEqualT<'T>(pred : 'T -> 'T -> Bool, A : 'T[], B : 'T[]) : Bool {
         if (Length(A) != Length(B)) {
             return false
         } 
@@ -48,7 +48,13 @@ namespace Vectors {
     /// Returns true if all the values are equal and in the same order in two complex vectors
     function VectorsEqualC(A : Complex[], B: Complex[]) : Bool {
         let equal = Curry2(EqualC);
-        VectorsEqual(equal, A, B)
+        VectorsEqualT(equal, A, B)
+    } 
+
+    /// Returns true if all the values are equal to n decimal places and in the same order in two complex vectors
+    function VectorsApproxEqualC(A : Complex[], B: Complex[], n : Int) : Bool {
+        let equal = Curry2(ApproxEqualC(_, _, n));
+        VectorsEqualT(equal, A, B)
     } 
 
     /// Convert a Double vector to a Complex vector
