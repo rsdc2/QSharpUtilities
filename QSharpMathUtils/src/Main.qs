@@ -18,6 +18,7 @@ import Matrices.Complex.Inverse.*;
 import Matrices.Complex.AdjointM.*;
 import Matrices.Complex.Multiply.*;
 import Matrices.Complex.Comparison.*;
+import TypeClasses.Field.*;
 
 import Categories.Monoid.*;
 import HigherOrderFunctions.*;
@@ -28,6 +29,22 @@ function TestMonoidReduceMul() : Complex {
 }
 
 @EntryPoint()
+function TestField() : Double {
+    let add = (x, y) -> x + y;
+    let mul = (x, y) -> x * y;
+    let addInv = x -> -x;
+    let mulInv = x -> 1./x;
+    let doubleField = Field(
+        add,
+        addInv,
+        0.,
+        mul,
+        mulInv,
+        1.);
+    
+    Div(doubleField, 1., 2.)
+}
+
 function TestUnitaryMatrices() : Bool {
     let identity = [[ToC(1.), ToC(0.)], [ToC(0.), ToC(1.)]];
     let A = [[Complex(5., 1.), Complex(2., 3.)], [Complex(3., 2.), Complex(3., 2.)]];

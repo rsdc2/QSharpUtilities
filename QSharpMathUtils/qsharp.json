@@ -22,7 +22,9 @@
       "src/Matrices/Multiply.qs",
       "src/Matrices/Properties.qs",
       "src/Matrices/Constructors.qs",
-      "src/Categories/Monoid.qs"
+      "src/TypeClasses/Field.qs",
+      "src/TypeClasses/Group.qs",
+      "src/TypeClasses/Monoid.qs"
      ],
     "lints": [
         {
